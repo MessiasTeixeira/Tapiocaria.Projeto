@@ -1,0 +1,498 @@
+html {
+    scroll-behavior: smooth
+}
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: black;
+    color: pink;
+    text-align: right;
+    margin: 0;
+    top: 0;
+    padding: 1%;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 2;
+}
+
+.header img {
+    width: 24px;
+    float: left;
+}
+
+.header a {
+    text-decoration: none; 
+    color: pink; 
+    position: relative; 
+}
+
+.header a:hover {
+    color: #ffa200; 
+    transform: translateY(-3px);
+}
+
+.header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.header li {
+    display: inline; 
+}
+
+.contact-us { /* Rodapé*/
+    background-color: black;
+    color: pink;
+    text-align: center;
+    padding: 2% 0;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    align-items: center; 
+    justify-content: center;
+
+    font-weight: bold;
+    border-top: 3px solid pink; 
+    box-shadow: 0px -2px 10px rgba(255, 105, 180, 0.3);
+}
+
+.contact-us img { /*Logos do rodapé*/
+    width: 24px;
+}
+
+.contact-us img.logo { /* Logo da tapiocaria Dona Rosa */
+    width: 40px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.contact-us footer {/*Texto do lado das logos*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.Rua { /*Texto da Rua*/
+    text-align: center;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.contact-us ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-us ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;  
+    gap: 20px;  
+    flex-wrap: wrap; 
+}
+
+button {
+    display: inline-block;
+    padding: 1rem;  
+    margin: 0.5rem;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+
+button:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #45a049;
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+a {
+    text-decoration: none;
+    color: pink;
+}
+
+.paragrafo {
+    text-align: center;
+    border-left: 5px solid #ff5f8f; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+    font-size: 21px;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold; 
+    color: #333; 
+}
+
+.paragrafo:hover {
+    transform: scale(1); 
+    background: linear-gradient(to right, #ffffff, #f5f5f5);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.container {
+    gap: 20px;
+    display: grid;
+    grid-column-gap: 90px;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    margin: 50px;
+}
+
+.item {
+    border-radius: 2px;
+    grid-column: 1;
+    bottom: 1px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 0.25rem; 
+    max-width: 400px;
+    color: #333;
+    border-color: rgb(255, 185, 185);
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    border-radius: 1rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item p {
+    font-size: 1rem;
+    color: #525c65; 
+    line-height: 1.5;
+}
+
+
+.item h3 {
+    font-size: 1.2rem; 
+    color: #495057; 
+    margin-bottom: 10px;
+}
+
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.right-box {
+    grid-column: 2;
+    position: sticky;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    top: 52px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    background-color: #ffffff; 
+    width: 400px;
+    border: 1px solid rgb(255, 185, 185);
+    border-radius: 5px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.right-box .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: orange;
+    width: 100%;
+    display: block;
+}
+
+.right-box p {
+    font-size: 1rem; 
+    color: #666; 
+    line-height: 1.5;
+}
+
+.right-box:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); 
+}
+
+.buy {
+    display: inline-block;
+    text-align: center; 
+    justify-content: center;
+    padding: 1rem;  
+    margin: 0.5rem;
+    background-color: greenyellow;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    color: #000;
+}
+
+.buy img {
+    width: 20px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+.right-box .buy {
+    margin-top: 30px; 
+    padding: 10px 40px;
+    background-color: #ffa200;
+    color: black;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 80px;
+    text-decoration: none;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.right-box .buy:hover {
+    background-color: #ff8700; 
+    transform: scale(1.05); 
+    color: #fff; 
+}
+
+.right-box p {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.poppins-medium {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: left;
+}
+
+.acompanhante .poppins-medium {
+    text-align: center;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5rem; 
+    color: #333; 
+    letter-spacing: 2px; 
+    padding: 5px 0; 
+}
+
+.acompanhante .poppins-medium:hover {
+    color: #ff6347; 
+    transition: color 0.3s ease-in-out; 
+}
+
+.acompanhante {
+    grid-column: 1; 
+    margin: 50px 0; 
+    width: 100%;
+}
+
+.line {
+    height: 20px;
+    width: 600px;
+    margin-left: 80px;
+    border-radius: 50px; 
+    background: linear-gradient(to right, #ff7eb3, #ff2a68); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    transition: all 0.3s ease-in-out; 
+}
+
+h4 {
+    position: relative;
+    left: 100px;
+    margin-top: 200px;
+    display: inline;
+}
+
+form {
+    width: 600px;
+    padding: 50px;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 8px;
+    color: #555;
+    display: block;
+    text-align: left;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+    width: 100%;
+    
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+
+input[type="submit"]:hover {
+    background-color: gray; 
+    transform: scale(1.05); 
+    color: #fff; 
+}
+
+#imensagem {
+    width: 100%;  
+    height: 100px;
+    resize: none;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+h3 {
+    color: yellowgreen;
+}
+
+.capa {
+    background-image: url("../img/tapioca.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.capa::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5); 
+z-index: 1;
+}
+
+.texto-capa {
+    position: relative;
+    z-index: 2; 
+}
+
+.texto-capa h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.texto-capa p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.map {
+    width: 100%;
+    height: 400px; 
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.conteudo {    
+    grid-column: 1;
+    text-align: left;
+    max-width: 600px;
+}
+
+.conteudo h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.conteudo p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.sobre-nos {
+    display: grid;
+    grid-column-gap: 90px;
+    grid-template-columns: 2fr 1fr;
+    align-items: center; 
+    gap: 40px; 
+    max-width: 1100px;
+    margin: 0 auto; 
+    padding: 50px 20px;
+    min-height: 80vh;
+}
