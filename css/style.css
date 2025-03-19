@@ -23,9 +23,10 @@ html {
     font-size: 1.2rem;
 }
 
-.header img {
+.HI {
     width: 2.2rem;
     float: left;
+    color: white;
 }
 
 .header a {
@@ -75,10 +76,11 @@ html {
     width: 24px;
 }
 
-.contact-uss img.logo { /* Logo da tapiocaria Dona Rosa para faça */
+.cilf { /* Logo da tapiocaria Dona Rosa para faça */
     width: 40px;
     height: auto;
     margin-bottom: 10px;
+    color: white;
 }
 
 .contact-uss footer {/*Texto do lado das logos para*/
@@ -129,10 +131,11 @@ html {
     width: 24px;
 }
 
-.contact-us img.logo { /* Logo da tapiocaria Dona Rosa */
+.cil { /* Logo da tapiocaria Dona Rosa */
     width: 40px;
     height: auto;
     margin-bottom: 10px;
+    color: white;
 }
 
 .contact-us footer {/*Texto do lado das logos*/
@@ -493,14 +496,14 @@ h3 {
 }
 
 .capa::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0, 0, 0, 0.5); 
-z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
 }
 
 .texto-capa {
@@ -560,7 +563,37 @@ z-index: 1;
     padding: 50px 20px;
     min-height: 80vh;
 }
-
+@keyframes bounce {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+      transform: translateY(0);
+      animation-timing-function: ease-in;
+    }
+    40% {
+      transform: translateY(-5px);
+      animation-timing-function: ease-out;
+    }
+    70% {
+      transform: translateY(-5px);
+      animation-timing-function: ease-out;
+    }
+    90% {
+      transform: translateY(-5px);
+    }
+  }
+   
+  .bounce {
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+  }
+ 
+  
+  
 @media (max-width: 768px) {
     body {
         overflow-x: hidden; 
